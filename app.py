@@ -212,7 +212,7 @@ async def generate(image_input, audio_input, pose_input, width, height, length, 
     return video_output, seed_text
 
 async def exeBuild(image_input, audio_input, pose_input, width, height, length, steps, sample_rate, cfg, fps, context_frames, context_overlap, quantization_input, seed):
-    await generate(image_input, audio_input, pose_input, width, height, length, steps, sample_rate, cfg, fps, context_frames, context_overlap, quantization_input, seed)
+    return await generate(image_input, audio_input, pose_input, width, height, length, steps, sample_rate, cfg, fps, context_frames, context_overlap, quantization_input, seed)
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
